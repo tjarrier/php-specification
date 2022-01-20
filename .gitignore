@@ -1,1 +1,7 @@
 .idea/
+/vendor/
+phpcs.xml
+phpunit.xml
+phpstan.neon
+.deptrac.cache
+.phpunit.result.cache
