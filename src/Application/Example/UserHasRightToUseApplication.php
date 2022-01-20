@@ -19,9 +19,4 @@ final class UserHasRightToUseApplication extends ComposedSpecification
     {
         return (new UserIsActive($this->user))->andX([new UserIsAdult($this->user)]);
     }
-
-    public function isSatisfiedBy(mixed $value = null): bool
-    {
-        return parent::isSatisfiedBy($value);
-    }
 }

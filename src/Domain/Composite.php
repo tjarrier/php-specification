@@ -30,6 +30,7 @@ abstract class Composite implements SpecificationInterface
             foreach ($specifications as $specification) {
                 $this->addSpecifications($specification);
             }
+
             return;
         }
 
