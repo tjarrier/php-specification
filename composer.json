@@ -1,0 +1,35 @@
+{
+    "name": "tja/php-specification",
+    "description": "Simple way to implement PHP Specification Pattern in your project",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tja\\PhpSpecification\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tja\\PhpSpecification\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thomas JARRIER",
+            "email": "jarriert@anyti.me"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "webmozart/assert": "^1.10"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpstan/phpstan": "^1.4",
+        "qossmic/deptrac-shim": "^0.19.1",
+        "rector/rector": "^0.12.13",
+        "symfony/var-dumper": "^6.0"
+    }
+}
