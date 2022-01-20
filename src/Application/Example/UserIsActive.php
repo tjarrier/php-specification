@@ -23,7 +23,7 @@ final class UserIsActive extends Specification
 
     public function getRule(): string
     {
-        return "is_active = 1 && first_name IS NOT NULL AND first_name <> '' && last_name IS NOT NULL && last_name <> ''";
+        return "is_active = 1 AND first_name IS NOT NULL AND first_name <> '' AND last_name IS NOT NULL AND last_name <> ''";
     }
 
     /**

@@ -8,16 +8,37 @@ use Tja\PhpSpecification\Domain\Exception\ParameterOverridenException;
 
 abstract class Composite implements SpecificationInterface
 {
+    protected array $specifications;
+
     /**
      * @param mixed[] $specifications
      */
     public function __construct(
         protected string $operator,
-        protected array $specifications
+        array $specifications
     ) {
         if (empty($specifications)) {
             throw new \LogicException('No specifications given.');
         }
+
+        $this->addSpecifications($specifications);
+    }
+
+    private function addSpecifications(mixed $specifications): void
+    {
+        if (is_array($specifications)) {
+            foreach ($specifications as $specification) {
+                $this->addSpecifications($specification);
+            }
+            return;
+        }
+
+        $this->addSpecification($specifications);
+    }
+
+    private function addSpecification(SpecificationInterface $specification): void
+    {
+        $this->specifications[] = $specification;
     }
 
     abstract public function isSatisfiedBy(mixed $value = null): bool;

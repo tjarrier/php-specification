@@ -10,6 +10,11 @@ abstract class ComposedSpecification extends Specification
 
     abstract protected function getSpecification(): SpecificationInterface;
 
+    public function isSatisfiedBy(mixed $value = null): bool
+    {
+        return $this->initializeSpecification()->isSatisfiedBy();
+    }
+
     public function getRule(): string
     {
         return $this->initializeSpecification()->getRule();

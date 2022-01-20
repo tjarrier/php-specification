@@ -18,7 +18,7 @@ class AndXTest extends TestCase
         ]);
         $this->assertInstanceOf(AndX::class, $andXSpecification);
         $this->assertEquals(
-            "(is_active = 1 && first_name IS NOT NULL AND first_name <> '' && last_name IS NOT NULL && last_name <> '') AND (:age >= 18)",
+            "(is_active = 1 AND first_name IS NOT NULL AND first_name <> '' AND last_name IS NOT NULL AND last_name <> '') AND (:age >= 18)",
             $andXSpecification->getRule()
         );
         $this->assertArrayHasKey('age', $andXSpecification->getParameters());

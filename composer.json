@@ -1,7 +1,7 @@
 {
     "name": "tja/php-specification",
     "description": "Simple way to implement PHP Specification Pattern in your project",
-    "type": "composer-plugin",
+    "type": "package",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -24,6 +24,7 @@
         "webmozart/assert": "^1.10"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "^3.6",
         "phpstan/phpstan": "^1.4",

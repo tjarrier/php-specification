@@ -13,7 +13,7 @@ class UserIsActiveTest extends TestCase
         $userIsActive = new UserIsActive($user);
         $this->assertTrue($userIsActive->isSatisfiedBy());
         $this->assertEquals(
-            "is_active = 1 && first_name IS NOT NULL AND first_name <> '' && last_name IS NOT NULL && last_name <> ''",
+            "is_active = 1 AND first_name IS NOT NULL AND first_name <> '' AND last_name IS NOT NULL AND last_name <> ''",
             $userIsActive->getRule()
         );
     }
@@ -24,7 +24,7 @@ class UserIsActiveTest extends TestCase
         $userIsActive = new UserIsActive($user);
         $this->assertFalse($userIsActive->isSatisfiedBy());
         $this->assertEquals(
-            "is_active = 1 && first_name IS NOT NULL AND first_name <> '' && last_name IS NOT NULL && last_name <> ''",
+            "is_active = 1 AND first_name IS NOT NULL AND first_name <> '' AND last_name IS NOT NULL AND last_name <> ''",
             $userIsActive->getRule()
         );
     }

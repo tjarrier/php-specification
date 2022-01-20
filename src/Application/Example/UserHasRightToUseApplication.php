@@ -17,11 +17,11 @@ final class UserHasRightToUseApplication extends ComposedSpecification
 
     protected function getSpecification(): SpecificationInterface
     {
-        return (new UserIsActive($this->user))->orX([new UserIsAdult($this->user)]);
+        return (new UserIsActive($this->user))->andX([new UserIsAdult($this->user)]);
     }
 
     public function isSatisfiedBy(mixed $value = null): bool
     {
-        return $this->getSpecification()->isSatisfiedBy($value);
+        return parent::isSatisfiedBy($value);
     }
 }
