@@ -29,7 +29,7 @@ clean-vendor: cc-hard ## Delete vendor folder and reinstall
 .PHONY: phpcs
 phpcs: ## Start phpcs
 	vendor/bin/phpcbf
-	vendor/bin/phpcs --config-set php_version 801010 --exclude=Generic.Files.LineLength
+	vendor/bin/phpcs --config-set php_version 800000 --exclude=Generic.Files.LineLength
 
 .PHONY: phpstan
 phpstan: ## Start phpstan

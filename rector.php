@@ -18,11 +18,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/src',
         __DIR__ . '/tests'
     ]);
-    $parameters->set(Option::PHP_VERSION_FEATURES, PhpVersion::PHP_81);
+    $parameters->set(Option::PHP_VERSION_FEATURES, PhpVersion::PHP_80);
     $parameters->set(Option::PHPSTAN_FOR_RECTOR_PATH, getcwd() . '/phpstan.neon');
 
     // Define what rule sets will be applied
-    $containerConfigurator->import(LevelSetList::UP_TO_PHP_81);
+    $containerConfigurator->import(LevelSetList::UP_TO_PHP_80);
     $containerConfigurator->import(SetList::CODE_QUALITY);
     $containerConfigurator->import(SetList::CODING_STYLE);
     $containerConfigurator->import(SetList::DEAD_CODE);
