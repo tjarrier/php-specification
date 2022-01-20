@@ -11,7 +11,7 @@ final class AndX extends Composite
         parent::__construct('AND', $specifications);
     }
 
-    public function isSatisfiedBy(mixed $value): bool
+    public function isSatisfiedBy(mixed $value = null): bool
     {
         foreach ($this->specifications as $specification) {
             if (!$specification->isSatisfiedBy($value)) {

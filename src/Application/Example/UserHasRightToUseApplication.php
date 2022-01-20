@@ -20,8 +20,8 @@ final class UserHasRightToUseApplication extends ComposedSpecification
         return (new UserIsActive($this->user))->orX([new UserIsAdult($this->user)]);
     }
 
-    public function isSatisfiedBy(mixed $value): bool
+    public function isSatisfiedBy(mixed $value = null): bool
     {
-        return $this->getSpecification()->isSatisfiedBy(1);
+        return $this->getSpecification()->isSatisfiedBy($value);
     }
 }

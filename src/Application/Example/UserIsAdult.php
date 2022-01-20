@@ -18,7 +18,7 @@ final class UserIsAdult extends Specification
     {
     }
 
-    public function isSatisfiedBy(mixed $value): bool
+    public function isSatisfiedBy(mixed $value = null): bool
     {
         return $this->user->age() >= $value;
     }

@@ -6,7 +6,7 @@ namespace Tja\PhpSpecification\Domain;
 
 interface SpecificationInterface
 {
-    public function isSatisfiedBy(mixed $value): bool;
+    public function isSatisfiedBy(mixed $value = null): bool;
 
     public function getRule(): string;
 

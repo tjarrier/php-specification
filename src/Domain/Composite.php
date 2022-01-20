@@ -20,7 +20,7 @@ abstract class Composite implements SpecificationInterface
         }
     }
 
-    abstract public function isSatisfiedBy(mixed $value): bool;
+    abstract public function isSatisfiedBy(mixed $value = null): bool;
 
     public function getRule(): string
     {

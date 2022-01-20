@@ -13,7 +13,7 @@ final class UserIsActive extends Specification
     {
     }
 
-    public function isSatisfiedBy(mixed $value): bool
+    public function isSatisfiedBy(mixed $value = null): bool
     {
         return $this->user->isActive()
             && !empty($this->user->firstName())
